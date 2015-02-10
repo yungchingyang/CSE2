@@ -26,7 +26,7 @@
     int nBigMacs = myScanner.nextInt(); //calls a method that Scanner objects have – the “nextInt()” method
 //
 //  Prompt the user for the cost Big Mac and the percent sales tax and accept the input.
-    System.out.print("Enter the cost per Big Mac as” + “ a double (in the form xx.xx): ");
+    System.out.print("Enter the cost per Big Mac as" + " a double (in the form xx.xx): ");
     double bigMac$ = myScanner.nextDouble();    //assign bigMac$
 	System.out.print("Enter the percent tax as a whole number (xx): ");
     double taxRate = myScanner.nextDouble();    //assign tax rate
