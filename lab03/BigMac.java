@@ -9,7 +9,7 @@
 //  run the program
 //      java BigMac//
 //
-    import java.util.Scanner;
+    import java.util.Scanner;   //import scanner
 //
 //  define a class
         public class BigMac {
