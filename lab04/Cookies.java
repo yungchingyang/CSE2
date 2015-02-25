@@ -20,7 +20,7 @@
     Scanner myScanner;  //to accept input
     myScanner = new Scanner( System.in );  //construct an instance of the Scanner class
 //
-//  Start by:
+//  Start by
     System.out.print("Enter the number of People: ");   //prompt the user for the number of people
     int nPeople = myScanner.nextInt();  //  accept user input of number of people
 //

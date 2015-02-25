@@ -12,82 +12,93 @@
 //
     import java.util.Scanner;   //import scanner
 //    
-//  define a class
-        public class CC {
-//  main method required for every Java program
-        public static void main (String[ ] args) {
+    public class CC {   //define a class
+        public static void main (String[ ] args) {  //main method required for every Java program
 //
-    Scanner myScanner;  //to accept input
-    myScanner = new Scanner( System.in );  //construct an instance of the Scanner class
-//
-//  Start by:
-    System.out.print("Enter the number of People: ");   //prompt the user for the number of people
-    if ( myScanner.hasNextInt()) {
-        int nPeople = myScanner.nextInt();  //  accept user input of number of people
-        
-        if (nPeople > 0) {
+        Scanner myScanner;  //to accept input
+        myScanner = new Scanner( System.in );  //construct an instance of the Scanner class
+    
+        System.out.print("Enter the Number of people: ");
+        int nPeople;
+    
+        if ( myScanner.hasNextInt() ) {
+            nPeople = myScanner.nextInt();
             
-        }
-        System.out.print("Enter the number of cookies you are planning to buy: ");  //prompt the user for the number of cookies
-        if ( (myScanner.hasNextInt()) ) {
-            int nCookies = myScanner.nextInt();
-            
-            System.out.print("How many do you want each person to get? ");  //prompt the user for the desired number of cookies each person get
-            if ( (myScanner.hasNextInt()) ) {
-                int nEach = myScanner.nextInt();
+            if ( nPeople > 0 ) {
+                System.out.print("Enter the number of cookies you are planning to buy: ");
+                int nCookies;
                 
-                if ( (nEach >= 0) && ((nCookies / nPeople) >= nEach) ) {
-                    System.out.println("You have enough cookies for each person and the amount will divide evenly.");   //message for success
+                if ( myScanner.hasNextInt() ) {
+                    nCookies = myScanner.nextInt();
+                    
+                    if ( nCookies > 0 ) {
+                        System.out.print("How many do you want each person to get? ");
+                        int nEach;
+                        
+                        if ( myScanner.hasNextInt() ) {
+                            nEach = myScanner.nextInt();
+                            
+                            if ( nEach >= 0 ) {
+                                
+                                if ( ((nCookies / nPeople) >= nEach) ) {
+                                    
+                                    if ( (nCookies % nPeople) < nEach ) {
+                                        System.out.println("You have enough cookies for each person and the amount will divide evenly.");
+                                        return;
+                                    }
+                                    
+                                    else {
+                                        System.out.println("You have enough, but they will not divide evenly");
+                                        return;
+                                    }
+                                }
+                                
+                                else {
+                                    System.out.println("You will not have enough cookies. You need to bu at least " + ((nPeople * nEach) - nCookies) +" more. ");
+                                    return;
+                                }
+                        
+                            }
+                            
+                            else {
+                                System.out.println("You did not enter an int > 0. ");
+                                return;
+                            }
+                            
+                        }
+                        
+                        else {
+                            System.out.println("You did not enter an int");
+                            return;
+                        }
+                        
+                    }
+                    
+                    else{
+                        System.out.println("You did not enter an int > 0");
+                        return;
+                    }
+                    
                 }
                 
-                else if ( ((nCookies / nPeople) >= nEach) && ((nCookies % nPeople) < nEach) ) {
-                    System.out.println("You have enough, but they will not divide evenly.");   //print if there are enough cookies but cannot be divided evenly
+                else {
+                    System.out.println("You did not enter an int.");
                     return;
                 }
                 
-                else if ( ((nCookies / nPeople) < nEach) ){
-                    System.out.println("You will not have enough cookies. You need to buy at least " + ((nPeople * nEach) - nCookies) + " more."); //show the advice to increase cookies
-                    return;
-                }
-                
-            }
-            
-            else if ( myScanner.nextInt() <= 0 ) {
-                System.out.println("You did not enter an integer > 0. ");
-                return;
-            }
+            }       
             
             else {
-                System.out.println("You did not enter an int"); //print the error message if nEach is not an integer
-                return;    //leaves the program, i.e. the program terminates
+                System.out.println("You did not enter an int > 0");
+                return;
             }
-            
-            
-        }
         
-        else if ( myScanner.nextInt() <= 0 ){
-            System.out.println("You did not enter an integer > 0. ");
+        }
+    
+        else {
+            System.out.println("You did not enter an int");
             return;
         }
-        
-        else {
-            System.out.println("You did not enter an integer. ");
-            return; 
-        }
-        
-    }
     
-    else if ( (myScanner.hasNextInt()) && (myScanner.nextInt() <= 0) ) {
-        System.out.println("You did not enter an integer > 0. ");
-        return;
-    }
-    
-    
-    else {
-        System.out.println("You did not enter an integer. ");
-        return;
-    }
-//
-    }   //end of main method
-}   //end of the main class
-    
+    }   //end of the main method
+}   //end of the class
