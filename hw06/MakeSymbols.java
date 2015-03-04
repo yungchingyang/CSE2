@@ -21,7 +21,7 @@
             
             if ( (number%2) == 0 ) {    //in the condition if the number is even
                 int a = 0;  //assign count
-                do {    //do the following statement first
+                do {    //do the following statement first, start of the loop
                     System.out.print("*");  //print out "*"
                     a++;    //increase the count
                 } while ( a < (number-1) ); //decide when to stop the loop
