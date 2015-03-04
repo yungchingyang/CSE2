@@ -20,7 +20,7 @@
             int num;    //declare variable for user input
             int factorial = 1;  //declare result of factorial
             int i = 1;  //declare number
-            int set = 1;    //declare count
+            int set = 1;    //declare manipulating variable
             
             System.out.print("Please enter an integer that is between 9 and 16: \n");   //prompt user to input a number between 9 and 16
             
