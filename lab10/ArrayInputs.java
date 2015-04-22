@@ -10,7 +10,7 @@
 //      java ArrayInputs//
 //    
 //
-
+    import java.util.Random;
     import java.util.Scanner;   //import Scanner
 
     public class ArrayInputs {  //define a class
