@@ -67,7 +67,7 @@
                     }
                 }
 
-            return finalArray;  //return the result in the method
+                return finalArray;  //return the result in the method
                 
             }
             

@@ -13,18 +13,33 @@
    import java.util.Scanner;   //import Scanner
 
     public class lab12 {  //define a class
-    
+        
+        // The increasingMatrix method
         public static int increasingMatrix( int width, int height, boolean format ) {
             
             if ( format = true ) {
                 
-                int [][] matrix = new int [] [];
+                int [][] matrix = new int [width] [column];
                 
                 for (int row=0; row<matrix.length; row++ ) {
                     for (int column=0; column<matrix[row].length; column++ ) {
                         matrix[row][column] = input.nextInt();
                     }
                 }
+                
+                int total = width*column;
+                int start = 0;
+                int row = 0;
+                
+                while ( start<= total) {
+                    matrix[row][column]  = " " + start;
+                    start++;
+                    column++;
+                    if ( column >= matrix[width].length ) {
+                        column = 0;
+                        row++;
+                    }
+                } 
             
             else {
                 
